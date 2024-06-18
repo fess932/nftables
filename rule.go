@@ -18,9 +18,9 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/fess932/nftables/binaryutil"
-	"github.com/fess932/nftables/expr"
-	"github.com/fess932/nftables/internal/parseexprfunc"
+	"github.com/google/nftables/binaryutil"
+	"github.com/google/nftables/expr"
+	"github.com/google/nftables/internal/parseexprfunc"
 	"github.com/mdlayher/netlink"
 	"golang.org/x/sys/unix"
 )

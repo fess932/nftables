@@ -1,7 +1,7 @@
 package xt
 
 import (
-	"github.com/fess932/nftables/alignedbuff"
+	"github.com/google/nftables/alignedbuff"
 )
 
 // Rev. 0, see https://elixir.bootlin.com/linux/v5.17.7/source/include/uapi/linux/netfilter/xt_addrtype.h#L38

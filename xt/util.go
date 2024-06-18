@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/fess932/nftables/alignedbuff"
+	"github.com/google/nftables/alignedbuff"
 	"golang.org/x/sys/unix"
 )
 

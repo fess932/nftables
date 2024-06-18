@@ -4,7 +4,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/fess932/nftables"
+	"github.com/google/nftables"
 	"github.com/vishvananda/netns"
 )
 

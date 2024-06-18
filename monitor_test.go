@@ -8,9 +8,9 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"github.com/fess932/nftables"
-	"github.com/fess932/nftables/expr"
-	"github.com/fess932/nftables/internal/nftest"
+	"github.com/google/nftables"
+	"github.com/google/nftables/expr"
+	"github.com/google/nftables/internal/nftest"
 )
 
 func ExampleNewMonitor() {

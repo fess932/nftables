@@ -19,8 +19,8 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/fess932/nftables"
-	"github.com/fess932/nftables/userdata"
+	"github.com/google/nftables"
+	"github.com/google/nftables/userdata"
 )
 
 func TestUserDataComment(t *testing.T) {

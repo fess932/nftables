@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/fess932/nftables"
+	"github.com/google/nftables"
 	"github.com/mdlayher/netlink"
 )
 
