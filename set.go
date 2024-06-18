@@ -265,6 +265,7 @@ type Set struct {
 	// Either host (binaryutil.NativeEndian) or big (binaryutil.BigEndian) endian as per
 	// https://git.netfilter.org/nftables/tree/include/datatype.h?id=d486c9e626405e829221b82d7355558005b26d8a#n109
 	KeyByteOrder binaryutil.ByteOrder
+	Size         uint32
 }
 
 // SetElement represents a data point within a set.
@@ -740,6 +741,23 @@ func setsFromMsg(msg netlink.Message) (*Set, error) {
 			set.DataType = dt
 		case unix.NFTA_SET_DATA_LEN:
 			set.DataType.Bytes = binary.BigEndian.Uint32(ad.Bytes())
+
+		case unix.NFTA_SET_TABLE:
+		case 16: // NFTA_SET_HANDLE:
+		case unix.NFTA_SET_USERDATA:
+
+		case unix.NFTA_SET_DESC:
+			attrs, derr := netlink.UnmarshalAttributes(ad.Bytes())
+			if derr != nil {
+				return nil, fmt.Errorf("failed to unmarshal set attr decode: %w", derr)
+			}
+
+			for _, v := range attrs {
+				if v.Type == unix.NFTA_SET_ELEM_KEY && v.Length == 8 {
+					set.Size = binary.BigEndian.Uint32(v.Data)
+				}
+			}
+		default:
 		}
 	}
 	return &set, nil
