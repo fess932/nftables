@@ -31,5 +31,5 @@ jobs:
       run: |
         go vet .
         go test ./...
-        go test -c github.com/google/nftables
+        go test -c github.com/fess932/nftables
         sudo ./nftables.test -test.v -run_system_tests

@@ -26,11 +26,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/google/nftables"
-	"github.com/google/nftables/binaryutil"
-	"github.com/google/nftables/expr"
-	"github.com/google/nftables/internal/nftest"
-	"github.com/google/nftables/xt"
+	"github.com/fess932/nftables"
+	"github.com/fess932/nftables/binaryutil"
+	"github.com/fess932/nftables/expr"
+	"github.com/fess932/nftables/internal/nftest"
+	"github.com/fess932/nftables/xt"
 	"github.com/mdlayher/netlink"
 	"golang.org/x/sys/unix"
 )

@@ -1,4 +1,4 @@
-module github.com/google/nftables
+module github.com/fess932/nftables
 
 go 1.22.3
 

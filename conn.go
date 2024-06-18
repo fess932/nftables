@@ -20,8 +20,8 @@ import (
 	"os"
 	"sync"
 
-	"github.com/google/nftables/binaryutil"
-	"github.com/google/nftables/expr"
+	"github.com/fess932/nftables/binaryutil"
+	"github.com/fess932/nftables/expr"
 	"github.com/mdlayher/netlink"
 	"github.com/mdlayher/netlink/nltest"
 	"golang.org/x/sys/unix"
