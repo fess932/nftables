@@ -1,6 +1,6 @@
 module github.com/fess932/nftables
 
-go 1.21
+go 1.22.3
 
 require (
 	github.com/mdlayher/netlink v1.7.2
