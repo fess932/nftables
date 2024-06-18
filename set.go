@@ -743,9 +743,8 @@ func setsFromMsg(msg netlink.Message) (*Set, error) {
 			set.DataType.Bytes = binary.BigEndian.Uint32(ad.Bytes())
 
 		case unix.NFTA_SET_TABLE:
-		case 16: // NFTA_SET_HANDLE:
+		case 16: // unix.NFTA_SET_HANDLE:
 		case unix.NFTA_SET_USERDATA:
-
 		case unix.NFTA_SET_DESC:
 			attrs, derr := netlink.UnmarshalAttributes(ad.Bytes())
 			if derr != nil {
@@ -755,6 +754,7 @@ func setsFromMsg(msg netlink.Message) (*Set, error) {
 			for _, v := range attrs {
 				if v.Type == unix.NFTA_SET_ELEM_KEY && v.Length == 8 {
 					set.Size = binary.BigEndian.Uint32(v.Data)
+					break
 				}
 			}
 		default:
